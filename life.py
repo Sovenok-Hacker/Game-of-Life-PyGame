@@ -37,7 +37,7 @@ while True:
             p.draw.rect(root, (255 * cells[i][j] % 256 , 0 , 0) , [i * 20 , j * 20 , 20 , 20])
     # Обновляем экран
     p.display.update()
-    cells2 = [[0 for j in range(len(cells[0]))] for i in range(len(cells))]
+    cells2 = [[False for j in range(len(cells[0]))] for i in range(len(cells))]
     events = p.event.get()
     if p.MOUSEBUTTONDOWN in [e.type for e in events]: # определяем клик
         pos = tuple([x // 20 for x in p.mouse.get_pos()])
